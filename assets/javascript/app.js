@@ -1,16 +1,38 @@
 // Psuedocode here ~
+$(document).ready(function () {
 
-// Trivia Game Title
-// Start button
+    var timeLeft = 120;
+    var correct = "";
+    var incorrect = "";
+    var unanswered = "";
+    var intervalId;
 
-// Page load, start timer @ 120 seconds
+    $(".questions").hide();
+    
+    $("#start").on("click", run);
+    $("#submit").on("click", stop);
 
-// Ask a question
-// Provide 4 mult choice answers
-// Ten times
+    function run() {
+        $(".questions").show();
+        $("#content").html("<h2>Time Remaining: " + timeLeft + " Seconds</h2>");
+        clearInterval(intervalId);
+        intervalId = setInterval(decrement, 1000);
+    }
 
-// Submit button || timerout
-// All done!
-// Correct :
-// Incorrect :
-// Unanswered :
+    function decrement() {
+        timeLeft--;
+        $("#content").html("<h2>Time Remaining: " + timeLeft + " Seconds</h2>");
+        if (timeLeft === 0) {
+            stop();
+            alert("Time Up!");
+        }
+    }
+
+    function stop() {
+        clearInterval(intervalId);
+        $(".questions").hide();
+        $("#content").html("<h2>All done</h2><h3>Correct: " + correct + "</h3><h3>Inccorect: " + incorrect + "</h3><h3>Unanswered: " + unanswered)
+    };
+
+
+});

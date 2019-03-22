@@ -1,17 +1,233 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
 
     <title>Trivia Game!</title>
-  </head>
-  <body>
+</head>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<body>
+    <div class="container">
+        <h1>The Office Trivia</h1>
+        <div id="content">
+                <h2 id="start">Start</h2>
+        </div>
+        <div class="questions">
+            <h3>“The Office” is mainly set at what company?</h3>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio1">Mitch and Murray</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                    value="option2">
+                <label class="form-check-label" for="inlineRadio2">Dunder Mifflin</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio1">The Parks Department</label>
+            </div>
+            <br>
+            <h3>Which character does NOT appear in the very first episode of “The Office”?</h3>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio1"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio1">Kevin Malone</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2"
+                    value="option2">
+                <label class="form-check-label" for="inlineRadio2">Andy Bernard</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio1"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio1">Jan Levinson-Gould</label>
+            </div>
+            <br>
+            <h3>What does Jim famously do to Dwight’s stapler?</h3>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio1"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio1">Glue googly eyes on it</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio2"
+                    value="option2">
+                <label class="form-check-label" for="inlineRadio2">Melt it in the microwave</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio1"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio1">Put it in jello</label>
+            </div>
+            <br>
+            <h3>What is the name of Michael Scott’s screenplay?</h3>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio1"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio1">Threat Level: Midnight</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio2"
+                    value="option2">
+                <label class="form-check-label" for="inlineRadio2">What’s Updog</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio1"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio1">Scott’s Tots</label>
+            </div>
+            <br>
+            <h3>Jim famously says it was “not a bad day” after what happens?</h3>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio1"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio1">Pam falls asleep on him</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio2"
+                    value="option2">
+                <label class="form-check-label" for="inlineRadio2">He first pranks Michael</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio1"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio1">He starts at Stamford</label>
+            </div>
+            <br>
+            <h3>Which of these items is NOT inside Pam’s teapot gift from her Secret Santa?</h3>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="inlineRadio1"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio1">Cassette tape</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="inlineRadio2"
+                    value="option2">
+                <label class="form-check-label" for="inlineRadio2">Hot sauce</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="inlineRadio1"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio1">Watercolors</label>
+            </div>
+            <br>
+            <h3>During the only Christmas party Dwight got to plan, which character passes out?</h3>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio1"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio1">Angela Kinsey</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio2"
+                    value="option2">
+                <label class="form-check-label" for="inlineRadio2">Dwight Schrute</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio1"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio1">Darryl Philbin</label>
+            </div>
+            <br>
+            <h3>What does Michael Scott say right before running over Meredith?</h3>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio1"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio1">I feel very blessed</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio2"
+                    value="option2">
+                <label class="form-check-label" for="inlineRadio2">I just like driving</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio1"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio1">I love everyone</label>
+            </div>
+            <br>
+            <h3>Which of these three characters did NOT dress up as a cat for Halloween?</h3>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="inlineRadio1"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio1">Creed Bratton</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="inlineRadio2"
+                    value="option2">
+                <label class="form-check-label" for="inlineRadio2">Andy Bernard</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="inlineRadio1"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio1">Pam Beesly</label>
+            </div>
+            <br>
+            <h3>Who operates the camera during “The Office” lip dub music video?</h3>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="inlineRadio1"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio1">Toby Flenderson</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="inlineRadio2"
+                    value="option2">
+                <label class="form-check-label" for="inlineRadio2">Gabe Lewis</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="inlineRadio1"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio1">Holly Flax</label>
+            </div>
+            <br>
+            <h3>Which of these is NOT an ingredient mentioned in Kevin’s famous chili?</h3>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions11" id="inlineRadio1"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio1">Ancho chiles</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions11" id="inlineRadio2"
+                    value="option2">
+                <label class="form-check-label" for="inlineRadio2">Onion</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions11" id="inlineRadio1"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio1">Smoked beef</label>
+            </div>
+            <br>
+            <h3>Where do Jim and Pam share their very first kiss?</h3>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions12" id="inlineRadio1"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio1">Booze cruise</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions12" id="inlineRadio2"
+                    value="option2">
+                <label class="form-check-label" for="inlineRadio2">The warehouse</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions12" id="inlineRadio1"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio1">Chain restaurant</label>
+            </div>
+            <br>
+            <h3 id="submit">Submit</h3>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./assets/javascript/app.js"></script>
-  </body>
+</body>
+
 </html>
