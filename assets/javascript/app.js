@@ -1,7 +1,7 @@
 // Psuedocode here ~
 $(document).ready(function () {
 
-    var timeLeft = 120;
+    var timeLeft = 32;
     var correct = "";
     var incorrect = "";
     var unanswered = "";
@@ -17,6 +17,7 @@ $(document).ready(function () {
         $("#content").html("<h2>Time Remaining: " + timeLeft + " Seconds</h2>");
         clearInterval(intervalId);
         intervalId = setInterval(decrement, 1000);
+        play ();
     }
 
     function decrement() {
@@ -27,6 +28,10 @@ $(document).ready(function () {
             alert("Time Up!");
         }
     }
+    function play(){
+        var audio = document.getElementById("audio");
+        audio.play();
+                  }
 
     function stop() {
         clearInterval(intervalId);
