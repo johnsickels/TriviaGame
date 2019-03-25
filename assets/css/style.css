@@ -1,0 +1,33 @@
+/* color:rgba(0, 167, 208); */
+/* rgba(0, 107, 167) */
+/* rgba(180, 180, 181) */
+
+body {
+    background-image: url("../images/officebg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    line-height: 2;
+    font-size: 20px;
+}
+h1 {
+    margin: 0 0 30px 0;
+    background-color: rgba(0,167,208);
+    font-weight: 600;
+    font-size: 40px;
+    padding: 50px;
+    text-align: center;
+}
+.container {
+    background-color:rgba(180, 180, 181, 0.8);
+    min-height: 300px;
+    padding: 100px;
+    margin: 50px;
+}
+#start, #submit, #reset {
+    background-color: rgba(0, 107, 167);
+    font-weight: 600;
+    font-size: 40px;
+    padding: 50px;
+    text-align: center;
+
+}

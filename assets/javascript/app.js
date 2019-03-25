@@ -55,6 +55,7 @@ $(document).ready(function () {
     },
     ]
     $("#submit").hide();
+    $("#reset").hide();
     $("#start").on("click", run);
     $("#submit").on("click", stop);
     function run() {
@@ -87,19 +88,25 @@ $(document).ready(function () {
         $("#submit").hide();
         $("#reset").show();
 
+        grade();
+        $("#content").html("<h2>All done</h2><h3>Correct: " + correct + "</h3><h3>Incorrect: " + incorrect + "</h3><h3>Unanswered: " + unanswered);
+
+    };
+    function grade() {
         for (i = 0; i < questions.length; i++) {
             if ($("input[name='inlineRadioOptions" + i + "']:checked").parent().text() === questions[i].correctAnswer) {
                 correct++;
-            } else if ($("input[name='inlineRadioOptions" + i + "']:checked").parent().text().length === 0) {
+            }
+            else if ($("input[name='inlineRadioOptions" + i + "']:checked").parent().text().length === 0) {
                 unanswered++;
-            } else {
+            }
+            else {
                 incorrect++;
-            };
-        };
-        $("#content").html("<h2>All done</h2><h3>Correct: " + correct + "</h3><h3>Incorrect: " + incorrect + "</h3><h3>Unanswered: " + unanswered);
-        $("#reset").html("Try again?");
-        
-    };
+            }
+            ;
+        }
+        ;
+    }
     $("#reset").on("click", function () {
         $("#reset").hide();
         timeLeft = 35;
@@ -107,7 +114,7 @@ $(document).ready(function () {
         incorrect = 0;
         unanswered = 0;
         $("#questions").show();
-        run ();
+        run();
         audio.currentTime = 0;
     });
 
