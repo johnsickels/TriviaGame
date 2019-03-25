@@ -58,6 +58,7 @@ $(document).ready(function () {
     $("#start").on("click", run);
     $("#submit").on("click", stop);
     function run() {
+        $("#questions").empty();
         for (i = 0; i < questions.length; i++) {
             $("#questions").append('<h3>' + questions[i].question + '</h3><div class="form-check form-check-inline"><label class="form-check-label" for="inlineRadio1' + [i] + '"><input class="form-check-input" type="radio" name="inlineRadioOptions' + [i] + '" id="inlineRadio1' + [i] + '">' + questions[i].answers[0] + '</label></div><div class="form-check form-check-inline"><label class="form-check-label" for="inlineRadio2' + [i] + '"><input class="form-check-input" type="radio" name="inlineRadioOptions' + [i] + '" id="inlineRadio2' + [i] + '">' + questions[i].answers[1] + '</label></div><div class="form-check form-check-inline"><label class="form-check-label" for="inlineRadio3' + [i] + '"><input class="form-check-input" type="radio" name="inlineRadioOptions' + [i] + '" id="inlineRadio3' + [i] + '">' + questions[i].answers[2] + '</label></div>');
         }
@@ -84,6 +85,7 @@ $(document).ready(function () {
         clearInterval(intervalId);
         $("#questions").hide();
         $("#submit").hide();
+        $("#reset").show();
 
         for (i = 0; i < questions.length; i++) {
             if ($("input[name='inlineRadioOptions" + i + "']:checked").parent().text() === questions[i].correctAnswer) {
@@ -95,5 +97,18 @@ $(document).ready(function () {
             };
         };
         $("#content").html("<h2>All done</h2><h3>Correct: " + correct + "</h3><h3>Incorrect: " + incorrect + "</h3><h3>Unanswered: " + unanswered);
+        $("#reset").html("Try again?");
+        
     };
+    $("#reset").on("click", function () {
+        $("#reset").hide();
+        timeLeft = 35;
+        correct = 0;
+        incorrect = 0;
+        unanswered = 0;
+        $("#questions").show();
+        run ();
+        audio.currentTime = 0;
+    });
+
 });
