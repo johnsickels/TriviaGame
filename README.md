@@ -20,4 +20,4 @@
 
 ### Trivia Game Links:
 [Trivia Game](https://johnsickels.github.io/TriviaGame/)
-![Trivia Game](https://raw.githubusercontent.com/johnsickels/TriviaGame/master/assets/images/userinterface.jpg)
+![Trivia Game](https://raw.githubusercontent.com/johnsickels/TriviaGame/master/assets/images/userinterface.png)
