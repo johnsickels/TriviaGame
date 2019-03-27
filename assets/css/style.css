@@ -16,6 +16,9 @@ h1 {
     font-size: 40px;
     padding: 50px;
     text-align: center;
+    border: white;
+    border-width: 5px;
+    border-style: solid;
 }
 .container {
     background-color:rgba(180, 180, 181, 0.8);
@@ -29,5 +32,7 @@ h1 {
     font-size: 40px;
     padding: 50px;
     text-align: center;
-
+    border: white;
+    border-width: 5px;
+    border-style: solid;
 }

@@ -19,5 +19,5 @@
 - JQuery
 
 ### Trivia Game Links:
-[Trivia Game](.io)
-![Trivia Game](.jpg)
+[Trivia Game](https://johnsickels.github.io/TriviaGame/)
+![Trivia Game](https://raw.githubusercontent.com/johnsickels/TriviaGame/master/assets/images/userinterface.jpg)
